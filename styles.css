@@ -1,0 +1,238 @@
+:root{
+    --DarkGray: hsl(0, 0%, 63%);
+--Black: hsl(0, 0%, 0%);
+--White: hsl(0, 0%, 100%);
+--VeryDarkGray: hsl(0, 0%, 27%);
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-size: 12px;
+    font-family: 'Spartan', sans-serif;
+}
+ul,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.close{
+    display: none;
+}
+.hbg{
+    display: none;
+}
+.wrapper{
+    width: 100%;
+    height: 100vh;
+}
+.top{
+    display: flex;
+    height: 70vh;
+}
+.main-page{
+    width: 59%;
+    padding: 50px;
+    transition: all 0.5s;
+    background:url('images/desktop-image-hero-1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.main-page .nav{
+    display: flex;
+}
+.nav .logo{
+    margin-right: 15px;
+}
+.nav ul{
+    display: flex;
+}
+.nav ul li{
+    margin-left: 40px;
+}
+.nav li a{
+    color: var(--White);
+    opacity: 0.7;
+    font-weight: 600;
+}
+.content{
+    width: 41%;
+    padding: 0 90px;
+    position: relative;
+    transition: all 0.5s;
+}
+.content h1{
+    font-weight: 700;
+    font-size: 2.3rem;
+    color: var(--Black);
+    margin-bottom: 30px;
+    margin-top: 100px;
+}
+.content p{
+    font-weight: 500;
+    color: var(--DarkGray);
+    line-height: 1.7;
+}
+.bottom{
+    display: grid;
+    grid-template-columns: 30% auto 30%;
+}
+.shop-now{
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+.shop-now a{
+    font-size: 0.8rem;
+    color: var(--VeryDarkGray);
+    font-weight: lighter;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    margin-right: 30px;
+}
+.buttons{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.prev{
+    background: url('images/icon-angle-left.svg') var(--Black);
+    height: 68px;
+    width: 68px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.next{
+    background: url('images/icon-angle-right.svg') var(--Black);
+    height: 68px;
+    width: 68px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.about{
+    padding: 60px 40px;
+}
+.about h1{
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 5px;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+.about p{
+    color: var(--DarkGray);
+    line-height: 1.7;
+}
+.nav a:hover{
+    border-bottom: 1px solid white;
+}
+.content a:hover{
+    color: var(--DarkGray);
+}
+.prev:hover,.next:hover{
+    background-color: var(--VeryDarkGray);
+    cursor: pointer;
+}
+
+@media(max-width: 600px){
+    .top{
+        flex-direction: column;
+        height: unset;
+    }
+    .close{
+        display: block;
+    }
+    .wrapper{
+        display: flex;
+        height: unset;
+        width: 100%;
+        flex-direction: column;
+    }
+    .main-page{
+        width: 100%;
+        height: 60vh;
+        padding: 50px 30px;
+    }
+    .nav ul{
+        display: none;
+    }
+    .hbg{
+        display: block;
+        cursor: pointer;
+    }
+    .main-page .logo{
+        margin: auto;
+    }
+    .content{
+        width: 100%;
+        padding: 0;
+    }
+    .bottom{
+        display: flex;
+        flex-direction: column;
+    }
+    .dark img,.light img{
+        width: 100%;
+    }
+    .content{
+        width: 100%;
+        margin: auto;
+    }
+    .buttons{
+        left: unset;
+        bottom: unset;
+        top: -68px;
+        right: 0;
+    }
+    .content h1{
+        width: 80%;
+        margin: 100px auto 30px auto;
+    }
+    .content p{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .shop-now{
+        width: 80%;
+        margin: 70px auto;
+    }
+    .about{
+        width: 80%;
+        margin: auto;
+        padding: 100px 0;
+    }
+    .active .nav ul{
+        display: flex;
+        width: 100%;
+        position: absolute;
+        height: 100px;
+        background-color: var(--White);
+        top: 0;
+        left: 0;
+        align-items: center;
+    }
+    .nav ul li{
+        margin-left: 20px;
+    }
+    .nav ul li a{
+        color: var(--Black);
+    }
+    .nav ul .close{
+        cursor: pointer;
+        margin-right: 30px;
+    }
+    .nav ul li a:hover{
+        border-bottom: 1px solid black;
+    }
+    .content h1{
+        font-size: 1.5rem;
+    }
+    .about h1{
+        font-size: 0.8rem;
+    }
+}
